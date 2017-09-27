@@ -84,7 +84,7 @@ Top of Nav Bar Container
 Sticky Nav Bar Container
 ============================================================*/
 .top-nav {
-    position: sticky;    
+    position: sticky;
     position: -webkit-sticky;
     top: -1px;
     z-index: 500;
@@ -123,7 +123,7 @@ Why Clean Bee Container
 .box-header {
     text-align: center;
 }
- 
+
 .box-header::after {
     width: 100%;
     margin-left: auto;
@@ -218,7 +218,7 @@ Get Free Estimate Container
     color: white;
     padding: 1%;
     font-weight: 900;
-   
+
 }
 
 .estimate-btn-bg {
@@ -292,19 +292,19 @@ Footer
 
 .bottom-logo {
    padding-top: 1.5%;
-   
+
 }
 
 .bottom-phone {
     padding-top: 3%;
-    
-    
+
+
 }
 
 .bottom-phone-num {
     font-size: 2em;
     font-weight: 700;
-    
+
 }
 
 
@@ -322,23 +322,23 @@ Footer
 
 .bottom-days {
     font-size: 1.3em;
-    
+
 }
 
 .bottom-weekend {
     font-size: 1.3em;
-    
+
 }
 
 .bottom-sm-col {
-  padding-top: 3%;  
-    
+  padding-top: 3%;
+
 }
 .facebook {
     width: 50px;
     margin-right:2%;
     margin-left: 2%;
-    
+
 }
 
 .twitter {
@@ -361,7 +361,7 @@ Footer
 
 .copy-right {
     font-size: .8em;
-    
+
 }
 
 
@@ -370,11 +370,11 @@ Footer
 ==========================================================*/
 .about-us {
     margin-bottom: 8%;
-    
+
 }
 
 .about-header{
-    
+
     text-align: center;
     font-size: 4em;
     margin-bottom: 6%;
@@ -385,25 +385,25 @@ Footer
 }
 
 .about-para {
-    
+
 }
 
 .big-about-heading {
    font-size: 2.5em;
-    
+
 }
 
 
 .little-about-heading {
     font-size: 1.2em;
     margin-bottom: 8%;
-    
+
 }
 
 .mission h2 {
     padding-left: 3%;
     margin-bottom: 5%;
-    
+
 }
 
 .vision h2 {
@@ -412,7 +412,7 @@ Footer
 
 .about-image-container {
     margin-bottom: 8%;
-    
+
 }
 
 .check {
@@ -437,7 +437,7 @@ Footer
 
 .portfolio {
     margin-bottom: 10%;
-    
+
 }
 
 .price-plan {
@@ -464,12 +464,18 @@ Footer
 
 .price-plan p {
     font-size: 1em;
-    
+
 }
 .price-row {
     margin-bottom: 15%;
-    
+
 }
+
+.portfolio img {
+  margin-left: 27%;
+  padding-bottom: 2%;
+}
+
 
 /*----------Background Color for Pricing-------------*/
 
@@ -515,7 +521,7 @@ Footer
     text-align: center;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
     color: rgba(0, 0, 0, 0.6);
-    
+
 }
 /*Pricing List Styles*/
     .db-pricing-eleven ul {
@@ -586,6 +592,17 @@ Footer
         padding-top: 12%;
     }
 
+    .db-wrapper {
+      margin-left: 15%;
+    }
+
+  .price-plan {
+    margin-left: 15%;
+  }
+
+  .price-plan h2 {
+    font-size: 2em;
+  }
 
 
 
@@ -593,8 +610,8 @@ Footer
 *****************TESTIMONIAL PAGE STYLE**********
 ==========================================================*/
 .quote-wrapper {
-  margin-bottom: 10%;  
-    
+  margin-bottom: 10%;
+
 }
 .quote-container {
     text-align: center;
@@ -637,7 +654,7 @@ Footer
 .contact-info h3 {
     font-size: 3em;
     padding-left: 7%
-    
+
 }
 
 .contact-info h6 {
@@ -688,7 +705,7 @@ Footer
 .fb-like {
     font-size: .6em;
     margin-left: 2%;
-    
+
 }
 .lil-facebook {
     width: 30px;
@@ -748,6 +765,26 @@ Media Queries
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 /* Styles */
 
+/*---Top Nav Bar---*/
+
+    .top-wrap {
+      padding-top: 5%;
+      padding-bottom: 10%;
+    }
+
+    .open-col {
+      margin-top: 3%;
+      margin-bottom: 5%;
+    }
+
+    .quote-btn {
+      margin-top: 5%;
+    }
+
+    /*---/Top Nav Bar---*/
+
+    /*--Index--*/
+
     .kelli img {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -760,27 +797,129 @@ Media Queries
     .estimate-wrapper{
     height: 6em;
     }
-    
+
     .estimate-row{
         padding-top: 2%;
     }
     .works {
         margin-top: 10%;
     }
-   
+
+      /*-- End Index--*/
+
+      /*--About Page--*/
+      .about-header {
+        font-size: 2em;
+      }
+        .about-img-wrap {
+          margin-left: 6%;
+        }
+        .about-para h3 {
+          margin-top: 10%;
+        }
+        .about-para h6 {
+          margin-top: 5%;
+        }
+
+        .about-image-container {
+          margin-left: 8%;
+        }
+
+        .about-image-container img {
+          padding: 5%;
+        }
+        /*--End About Page--*/
+
+        /*--Services Page --*/
+
+        .service-heading {
+          font-size: 2em;
+        }
+
+        .service-img img {
+          padding: 5%;
+        }
+
+        .service-hr {
+          background-color: #00cdff;
+          height: 3px;
+        }
+
+        /*--End Services Page --*/
+
+      /*--Testimonial Page--*/
+      .quote-wrapper {
+        padding: 10%;
+      }
+      /*--Testimonial Page End --*/
+
+      /*--Contact Page --*/
+      .contact-info h3{
+        font-size: 2em;
+      }
+
+      .call-us, .num, .email-us, .like-us {
+        font-size: 1.2em;
+      }
+
+      .num a {
+        font-size: .8em;
+      }
+
+      .e-mail a {
+        font-size: .8em;
+      }
+
+      .contact-form h3 {
+        margin-top: 15%;
+        font-size: 2em;
+        }
+
+        .contact-form h6 {
+          font-size: 1.2em;
+        }
+
+      /*--/Contact Page */
+
+      /*--Bottom Nav--*/
+    .foot-nav {
+      margin-bottom: -10%;
+    }
+
+    .foot-nav-links li a {
+    display: none;
+    }
+
+    .bottom-wrap{
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+
+    .bottom-phone-num {
+      font-size: 1.5em;
+      padding: 2%;
+    }
+    .bottom-sm-col img {
+      width: 30px;
+      padding-top: 8%;
+      margin-bottom: 10%;
+    }
+
+      /*--End Bottom Nav--*/
+
 } /*--Mobile Phone Media Queries END--*/
 
 /* Tablets and Ipads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 /* Styles */
-    
+
     /*-------Top Nav Styles---------*/
-    
+
     .top-wrap {
         padding-top: 3%;
         padding-bottom: 2%;
     }
-    
+
     .nav-links li {
     padding-left: 3%;
     padding-right: 3%;
@@ -789,7 +928,7 @@ Media Queries
 .phone-num {
     font-size: 1.5em;
 }
-    
+
     /*----lower nav styles------*/
 
 .foot-nav {
@@ -800,7 +939,7 @@ Media Queries
     font-size: 1.5em;
     font-weight: 500;
     padding-top: 11%;
-    
+
 }
 
 .bottom-hours {
@@ -812,12 +951,12 @@ Media Queries
 
 .bottom-days {
     font-size: 1em;
-    
+
 }
 
 .bottom-weekend {
     font-size: 1em;
-    
+
 }
 
 .facebook {
@@ -825,7 +964,7 @@ Media Queries
     margin-right:1%;
     margin-left: 1%;
     padding-top: 15%;
-    
+
 }
 
 .twitter {
@@ -855,14 +994,14 @@ Media Queries
         margin-bottom: 5%;
         width: 80%;
         }
-    
+
       .estimate-wrapper{
         margin-top: 5%;
     }
        .estimate-row{
         padding-top: 2%;
     }
-    
+
        .works {
         margin-top: 5%;
     }
@@ -871,36 +1010,35 @@ Media Queries
     .mission h2 {
         margin-top: 10%;
     }
-    
+
     .vision h2 {
         margin-top: 10%;
     }
-    
-    
+
+
 /*-------Service Page Styles-----------*/
     .price-plan {
         width: 90%;
         margin-top: 7%;
     }
-    
+
     .price-plan h2 {
         font-size: 1.5em;
         font-weight: 800;
     }
-    
+
     .price-plan h5 {
         font-size: .9em;
     }
-    
+
+
+
 /*--------Testimonial Page Styles ----------*/
-    
-    
+
+
 /*--------Contact Page Styles--------------*/
     .contact-info h3 {
         margin-top: 5%;
     }
-    
+
 } /*--Tablet Media Queries END--*/
-
-
-
