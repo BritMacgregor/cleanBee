@@ -2,9 +2,9 @@
 <!--HOME PAGE -->
 <html lang="en">
   <head>
-  
+
        <title> Clean Bee - Cleaning Service </title>
-    
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,236 +12,355 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
-    
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/app.css">
 
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Raleway" rel="stylesheet">
+
   </head>
-    
+
     <body>
-      <!-- Top of Nav Bar Container -->
+
+       <!-- Top of Nav Bar Container Mobile-->
        <div class="container-fluid top-wrap">
           <div class="row">
-              <div class="col-sm-3 logo">
-                  <!-- 1st Column Content-->
-                  <img src="imgs/Cleanbee Logo-150x73.png" alt="Clean Bee Cleaning Service" >
+              <div class="col-8 estimate-head">
+                  <h5 >Get your Free Estimate Today!</h5>
               </div>
-              <div class="col-sm-3 phone-num">
-                  <!-- 2nd Column Content-->
-                  <p class="p-num">502-555-5555</p>
+              <div class="col-4">
+                  <button type="button" class="btn btn-primary quote-btn"  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Free Quote</button>
               </div>
-              <div class="col-sm-3 open-col">
-                  <!-- 3rd Column Content-->
-                  <p class="hours">Hours</p>
-                  <p class="days">M-F 9:00am-5:00pm</p>
-                  <p class="weekend">Sat 2pm-8pm</p>
-              </div>
-              <div class="col-sm-3 quote-btn-bg">
-                  <!-- 4th Column Content-->
-                  <button class="btn btn-primary quote-btn">Free Quote</button>
-              </div>
-          </div>
-       </div>
-      <!-- /Top of Nav Bar Container -->
-      
-      <!-- Sticky Nav Bar Container -->
-      
-          <nav class="navbar-nav top-nav">
-              <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="tests.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </nav>
+              <!--Modal Form-->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Free Quote</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="form_id">
+                          <div class="form-group">
+                            <label for="name" class="form-control-label">Name:</label>
+                            <input type="text" required="required" class="form-control" id="name">
 
-      <!-- /Sticky Nav Bar Container -->
-      
-      
-      <!-- Slide Show Carousel Container -->
-       <div class="container">
-          <div class="row">
-              <div class="col-sm-12">
-                <!--Carousel Content Here -->
-              </div>
+                          <label for="email" class="form-control-label">Email:</label>
+                            <input type="text" required="required" class="form-control" id="email">
+
+                          <label for="phone" class="form-control-label">Phone:</label>
+                            <input type="text" required="required" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" class="form-control" id="phone">
+                          </div>
+                          <div class="form-group">
+                            <label for="message" class="form-control-label">Message:</label>
+                            <textarea class="form-control" id="message"></textarea>
+                          </div>
+                          
+                          <input type="button" class="btn btn-secondary" name="submit_id" id="btn_id" value="Get Your Quote!" onclick="submit_by_id()"/>
+                          <input type="button" class="btn btn-secondary" name="close" data-dismiss="modal" value="Close" />
+                          
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
           </div>
        </div>
-      <!-- /Slide Show Carousel Container -->
-      
+       <!-- Top of Nav Bar Container Mobile End -->
+
+     <!--Mobile Navigation Top Menu -->
+      <nav class="navbar navbar-light top-nav-mobile hide-from-md-lg">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <span><img src="imgs/Cleanbee%20Logo-150x732.png"></span>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto nav-links">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">HOME <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="service.html">SERVICES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tests.html">TESTIMONALS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACTS</a>
+              </li>
+
+            </ul>
+          </div>
+      </nav>
+      <!--Mobile Navigation Top Menu End -->
+
+      <!--Desktop Navigation Top Menu--->
+      <nav class="navbar top-nav hide-from-sm">
+          <ul class="nav justify-content-center nav-ul">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html"><img src="imgs/Cleanbee-Logo-200x982.gif"></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="index.html"><b>HOME</b></a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="about.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="service.html">SERVICES</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="tests.html">TESTIMONIALS</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="contact.html">CONTACT</a>
+              </li>
+           </ul>
+      </nav>
+
+      <!--Desktop Navigation Top Menu End--->
+
+      <!--Image Carousel-->
+      <div id="carouselExampleIndicators" class="carousel " data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100 " src="imgs/wine.jpg" alt="Relax while we clean">
+                  <div class="carousel-text">
+                    <h3 class="hide-from-sm" >Giving you more time</h3><!--for use on desktop and tablet only-->
+                    <p class="hide-from-sm">to spend on what matters to you</p><!--for use on desktop and tablet only-->
+                  </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="imgs/music.jpg" alt="Relax while we clean">
+              <div class="carousel-text2">
+                <h3 class="hide-from-sm">Delivering Quality Service</h3><!--for use on desktop and tablet only-->
+                <p class="hide-from-sm">So you can enjoy more quality time</p><!--for use on desktop and tablet only-->
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="imgs/relax.jpg" alt="Relax while we clean">
+              <div class="carousel-text3">
+                <h3 class="hide-from-sm">Cleaning Just Got Easier</h3><!--for use on desktop and tablet only-->
+                <p class="hide-from-sm">Let us do the work so you can relax</p><!--for use on desktop and tablet only-->
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+      </div>
+      <!--Image Carousel End-->
+
       <!-- Why Clean Bee Container -->
-       <div class="container clean">   
+       <div class="container clean">
           <div class="row">
               <div class="col-sm-12 box-header">
                 <h1>Why Clean Bee?</h1>
-                    <p class="description">We operate in the Greater Louisville and Southern Indiana areas and provides a variety of cleaning services. </p>
+                    <p class="description">We operate in the Greater Louisville and Southern Indiana areas and provides a variety of cleaning services.</p>
+                      <p class="description2">Choose us because of our reputation for excellence.</p>
               </div>
            </div>
-              
+
             <div class="row">
-               <!--First Column-->
-                <div class="col-sm-3 why-clean">
-                  <ul>
-                      <li>
-                          <div class="icon-description">
-                              <img src="imgs/house.svg" alt="Sparkling Home">
-                          </div>
-                        <h4 class="list-heading">Heading Here</h4>
-                            <p class="list-para">
-                                Cupcake ipsum dolor. Sit amet macaroon candy canes. Gummi bears chocolate bar chupa chups jelly halvah. Jelly beans oat cake powder. 
-                            </p> 
-                      </li>
-                      <li>
-                          <div class="icon-description">
-                              <img src="imgs/spray.svg" alt="Cleaner">
-                          </div>
-                        <h4 class="list-heading">Heading Here</h4>
-                            <p class="list-para">
-                                Cupcake ipsum dolor. Sit amet macaroon candy canes. Gummi bears chocolate bar chupa chups jelly halvah. Jelly beans oat cake powder. 
-                            </p> 
-                      </li>
-                  </ul>
-                </div>
-                <!--/First Column-->
-                
-                <!--Middle Column-->
-                <div class="col-sm-6">
-                  <div class="col-sm-12 kelli box-header2">
-                  <img src="imgs/kelli-200x197.jpg" alt="Clean Bee Cleaning Service">
-                  </div>
-                </div>
-                <!--/Middle Column-->
-                
-                <!--Third Column-->
-                <div class="col-sm-3 why-clean">
-                  <ul>
-                      <li>
-                          <div class="icon-description">
-                             <img src="imgs/time.svg" alt="Time Saving">
-                          </div>
-                        <h4 class="list-heading">Heading Here</h4>
-                            <p class="list-para">
-                                Cupcake ipsum dolor. Sit amet macaroon candy canes. Gummi bears chocolate bar chupa chups jelly halvah. Jelly beans oat cake powder. 
-                            </p> 
-                      </li>
-                      <li>
-                          <div class="icon-description">
-                              <img src="imgs/family.svg" alt="Family Time">
-                          </div>
-                        <h4 class="list-heading">Heading Here</h4>
-                            <p class="list-para">
-                                Cupcake ipsum dolor. Sit amet macaroon candy canes. Gummi bears chocolate bar chupa chups jelly halvah. Jelly beans oat cake powder. 
-                            </p> 
-                      </li>
-                  </ul>
-                </div>
-                <!--/Third Column-->
-                
-              </div>
-          </div>
+              <!--First Column-->
+               <div class="col-md-3 why-clean">
+                 <ul>
+                     <li>
+                         <div class="icon-description">
+                             <img src="imgs/house.svg" alt="Sparkling Home">
+                         </div>
+                       <h4 class="list-heading">INSURED AND BONDED</h4>
+                           <p class="list-para">
+                               Our cleaners are insured and bonded so no need to worry about your apartment, office or garden
+                           </p>
+                     </li>
+                     <li>
+                         <div class="icon-description">
+                             <img src="imgs/spray.svg" alt="Cleaner">
+                         </div>
+                       <h4 class="list-heading">SPARKLING CLEAN</h4>
+                           <p class="list-para">
+                               We keep your home sparkling clean and germ free. Our disinfecting process kills 99% of common bacteria and viruses
+                           </p>
+                     </li>
+                 </ul>
+               </div>
+               <!--/First Column-->
+
+               <!--Middle Column-->
+               <div class="col-md-6 ">
+                 <div class="col-sm-12 kelli box-header2">
+                 <img src="imgs/kelli-200x197.jpg" alt="Clean Bee Cleaning Service">
+                 </div>
+               </div>
+               <!--/Middle Column-->
+
+               <!--Third Column-->
+               <div class="col-md-3 why-clean">
+                 <ul>
+                     <li>
+                         <div class="icon-description">
+                            <img src="imgs/time.svg" alt="Time Saving">
+                         </div>
+                       <h4 class="list-heading">LEADING TECHNOLOGIES </h4>
+                           <p class="list-para">
+                             We use safe hospital-grade disinfectants, HEPA filtrations and microfiber cleaning cloths to reduce cross contamination.
+                           </p>
+                     </li>
+                     <li>
+                         <div class="icon-description">
+                             <img src="imgs/family.svg" alt="Family Time">
+                         </div>
+                       <h4 class="list-heading">DEPENDABLE WORK</h4>
+                           <p class="list-para">
+                               Our reliable and stable crews understand your specific house and office clearning service needs.
+                           </p>
+                     </li>
+                 </ul>
+               </div>
+               <!--/Third Column-->
+
+              </div> <!--row Clean End-->
+          </div> <!--Container Clean End-->
       <!-- /Why Clean Bee Container -->
-      
+
       <!-- Free Estimate Container -->
        <div class="container-fluid estimate-wrapper">
            <div class="row estimate-row">
               <div class="col-sm-6 estimate">
                   <!--Free Estimate Call to Action content -->
-                  <h2>Get a Free Estimate!</h2>
+                  <h2>Get Started Today With a Free Estimate!</h2>
               </div>
               <div class="col-sm-6 estimate-btn-bg">
                   <!--Free Estimate Button content -->
-                  <button type="button" class="btn btn-primary estimate-btn">Free Estimate</button>
+                  <button type="button" class="btn btn-primary estimate-btn"  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Free Quote</button>
               </div>
           </div>
        </div>
       <!-- /Free Estimate Container -->
-      
+
       <!-- How it Works Container -->
        <div class="container works">
           <div class="row">
               <div class="col-sm-4">
                   <!--Icon Here-->
-                  <h3>Heading Here</h3>
-                    <p>Cupcake ipsum dolor. Sit amet macaroon candy canes. Gummi bears chocolate bar chupa chups jelly halvah. Jelly beans oat cake powder. </p>
+                  <h3>We Are Experts</h3>
+                    <p>We are knowledgable with an extensive network that consistently delivers.</p>
               </div>
               <div class="col-sm-4">
                   <!--Icon Here-->
-                  <h3>Heading Here</h3>
-                    <p>Cupcake ipsum dolor. Sit amet macaroon candy canes. Gummi bears chocolate bar chupa chups jelly halvah. Jelly beans oat cake powder. </p>
+                  <h3>We Are Committed</h3>
+                    <p>Commited to our customers and are guided in all we do by their needs. </p>
               </div>
               <div class="col-sm-4">
                   <!--Icon Here-->
-                  <h3>Heading Here</h3>
-                    <p>Cupcake ipsum dolor. Sit amet macaroon candy canes. Gummi bears chocolate bar chupa chups jelly halvah. Jelly beans oat cake powder. </p>
+                  <h3>We Are Driven</h3>
+                    <p>Driven to pursue the highest standards and continuously improve in all. </p>
               </div>
           </div>
        </div>
       <!-- /How it Works Container -->
-      
-      <!-- Footer Nav Bar Container -->
-       <nav class="navbar-nav foot-nav">
-              <ul class="foot-nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="tests.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </nav>
-      <!-- /Footer Nav Bar Container -->
-      
-      <!-- Bottom Footer Container -->
-       <div class="container-fluid bottom-wrap">
-          <div class="row">
-              <div class="col-sm-3 bottom-logo">
-                  <!-- 1st Column Content-->
-                  <img src="imgs/Cleanbee Logo-200x98.png" alt="Clean Bee Cleaning Service" >
-              </div>
-              <div class="col-sm-3 bottom-phone">
-                  <!-- 2nd Column Content-->
-                  <p class="bottom-phone-num">502-555-5555</p>
-              </div>
-              <div class="col-sm-3 bottom-open-col">
-                  <!-- 3rd Column Content-->
-                  <p class="bottom-hours">Hours</p>
-                  <p class="bottom-days">M-F 9:00am-5:00pm</p>
-                  <p class="bottom-weekend">Sat 2pm-8pm</p>
-              </div>
-              <div class="col-sm-3 bottom-sm-col">
-                  <!-- 4th Column Content-->
-                  <a href="#"><img class="facebook" src="imgs/fb.svg" alt="Cleanbee on Facebook"></a>
-                  <a href="#"> <img class="twitter" src="imgs/twitter.svg" alt="Cleanbee on twitter"></a>
-                  <a href="#"><img class="linkin" src="imgs/linkin.svg" alt="Cleanbee on LinkedIn"></a>
-                  <a href="#"><img class="google" src="imgs/google.svg" alt="Cleanbee on Google+"></a>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-sm-12 copy-right">
-                  <p>&copy; Clean Bee 2017. All rights Reserved.</p>
-              </div>
-          </div>
-       </div>
-      <!-- /Bottom Footer Container -->
-      
 
-   
-   
+      <!--Mobile Footer-->
+        <footer>
+         <div class="container">
+           <div class="row">
+             <div class="col-sm-12 col-md-4 footer-contact-logo">
+               <span class="logo"><img src="imgs/Cleanbee%20Logo-200x982.png"></span>
+               <div class="col-sm-12 copyright"><p>&copy; Clean Bee 2017. All rights Reserved.</p></div>
+             </div>
+               <div class="col-sm-12 col-md-4 footer-contact">
+                  <ul class="address">
+                        <span>Contact</span>
+                        <li>
+                          <b>Phone:</b> 555-555-5555
+                        </li>
+                        <li>
+                           <b>Hours:</b> Open Mon-Sat. 9am-9pm
+                        </li>
+                        <li>
+                          <b>Email:</b> Handoverthebroom@cleanbee.com
+                        </li>
+                   </ul>
+               </div>
+                <div class="col-sm-12 col-md-4 footer-contact-sm">
+                    <ul class="menu">
+                         <span class="find">Find Us On</span>
+                             <div class="col-sm-12 bottom-sm-col">
+                              <!-- 4th Column Content-->
+                              <a href="#"><img class="facebook" src="imgs/fb.svg" alt="Cleanbee on Facebook"></a>
+                              <a href="#"> <img class="twitter" src="imgs/twitter.svg" alt="Cleanbee on twitter"></a>
+                              <a href="#"><img class="linkin" src="imgs/linkin.svg" alt="Cleanbee on LinkedIn"></a>
+                              <a href="#"><img class="google" src="imgs/google.svg" alt="Cleanbee on Google+"></a>
+                        </div>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+        </footer>
+      <!--Mobile Footer End-->
+
     <!-- Optional JavaScript -->
-    
- 
-
     <script type="text/javascript" src="js/sticky-nav.js" ></script>
-        
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
     
-      
-      
-      
-    
-    
-    
+    <script>
+        $(document).ready(function(){
+
+           $('#formModal').on('show.bs.modal', function (event) {
+              var button = $(event.relatedTarget) // Button that triggered the modal
+              
+           }) //event function end  
+            
+            //Submit form with id function
+        function submit_by_id() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var message = document.getElementById("message").value;
+
+            if(validation())// Calling validation function
+              { 
+                document.getElementById("form_id").submit();//form submission
+                alert(" Name : "+name+" \n Email : "+email+" \n Phone : "+phone+" \n Message : "+message+" \n Form Id : "+document.getElementById("form_id").getAttribute("id")+"\n\n Form Submitted Successfully......");
+              }	
+        }	    
+        }); //document ready end
+        
+        
+    </script>
+
   </body>
 </html>

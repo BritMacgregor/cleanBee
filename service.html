@@ -7,54 +7,124 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
 
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Raleway" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/app.css">
 
   </head>
 
-      <!-- Top of Nav Bar Container -->
+      <body>
+      <!-- Top of Nav Bar Container Mobile-->
        <div class="container-fluid top-wrap">
           <div class="row">
-              <div class="col-sm-3 logo">
-                  <!-- 1st Column Content-->
-                  <img src="imgs/Cleanbee Logo-150x73.png" alt="Clean Bee Cleaning Service" >
+              <div class="col-8 estimate-head">
+                  <h5 >Get your Free Estimate Today!</h5>
               </div>
-              <div class="col-sm-3 phone-num">
-                  <!-- 2nd Column Content-->
-                  <p class="p-num">502-555-5555</p>
+              <div class="col-4">
+                  <button type="button" class="btn btn-primary quote-btn"  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Free Quote</button>
               </div>
-              <div class="col-sm-3 open-col">
-                  <!-- 3rd Column Content-->
-                  <p class="hours">Hours</p>
-                  <p class="days">M-F 9:00am-5:00pm</p>
-                  <p class="weekend">Sat 2pm-8pm</p>
-              </div>
-              <div class="col-sm-3 quote-btn-bg">
-                  <!-- 4th Column Content-->
-                  <button class="btn btn-primary quote-btn">Free Quote</button>
-              </div>
+              <!--Modal Form-->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Free Quote</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="form_id">
+                          <div class="form-group">
+                            <label for="name" class="form-control-label">Name:</label>
+                            <input type="text" required="required" class="form-control" id="name">
+
+                          <label for="email" class="form-control-label">Email:</label>
+                            <input type="text" required="required" class="form-control" id="email">
+
+                          <label for="phone" class="form-control-label">Phone:</label>
+                            <input type="text" required="required" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" class="form-control" id="phone">
+                          </div>
+                          <div class="form-group">
+                            <label for="message" class="form-control-label">Message:</label>
+                            <textarea class="form-control" id="message"></textarea>
+                          </div>
+                          
+                          <input type="button" class="btn btn-secondary" name="submit_id" id="btn_id" value="Get Your Quote!" onclick="submit_by_id()"/>
+                          <input type="button" class="btn btn-secondary" name="close" data-dismiss="modal" value="Close" />
+                          
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
           </div>
        </div>
-      <!-- /Top of Nav Bar Container -->
+       <!-- Top of Nav Bar Container Mobile End -->
 
-      <!-- Sticky Nav Bar Container -->
+     <!--Mobile Navigation Top Menu -->
+      <nav class="navbar navbar-light top-nav-mobile hide-from-md-lg">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <span><img src="imgs/Cleanbee%20Logo-150x732.png"></span>
 
-          <nav class="navbar-nav top-nav">
-              <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="tests.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </nav>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto nav-links">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT</a>
+              </li>
+              <li class="nav-item  active">
+                <a class="nav-link" href="service.html">SERVICES <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tests.html">TESTIMONALS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACTS</a>
+              </li>
 
-      <!-- /Sticky Nav Bar Container -->
+            </ul>
+          </div>
+      </nav>
+      <!--Mobile Navigation Top Menu End -->
+
+      <!--Desktop Navigation Top Menu--->
+      <nav class="navbar top-nav hide-from-sm">
+          <ul class="nav justify-content-center nav-ul">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html"><img src="imgs/Cleanbee-Logo-200x982.gif"></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link " href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link " href="about.html">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link active" href="service.html"><b>SERVICES</b></a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="tests.html">TESTIMONIALS</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="contact.html">CONTACT</a>
+              </li>
+           </ul>
+      </nav>
+
+      <!--Desktop Navigation Top Menu End--->
 
       <!-- Our Cleaning Services Container -->
        <div class="container cleaning-service">
@@ -63,249 +133,174 @@
                  <h1 class="service-heading">Our Cleaning Services</h1>
              </div>
          </div>
-          <div class="row"> <!--First Row of Services-->
-              <div class="col-sm-3 service-img">
-                  <!--1st column content -->
-                  <img src="https://placeimg.com/225/225/people" alt="">
-              </div>
-              <div class="col-sm-3 service-text">
-                  <!--2nd column content -->
-                  <h3>Residential Cleaning</h3>
-                      <p>
-                          Cupcake ipsum dolor sit amet gummi bears. Gummi bears topping candy chocolate gummies sugar plum. Brownie gummi bears marshmallow chocolate bar gingerbread donut biscuit.
-                      </p>
-              </div>
-              <div class="col-sm-3 service-img">
-                  <!--3rd column content -->
-                  <img src="https://placeimg.com/225/225/people" alt="">
-              </div>
-              <div class="col-sm-3 service-text">
-                  <!--4th column content -->
-                   <h3>Residential Cleaning</h3>
-                      <p>
-                          Cupcake ipsum dolor sit amet gummi bears. Gummi bears topping candy chocolate gummies sugar plum. Brownie gummi bears marshmallow chocolate bar gingerbread donut biscuit.
-                      </p>
-              </div>
-          </div>
-
-          <hr class="service-hr"><!--hr for mobile only!-->
-
-          <div class="row"> <!--Second Row of Services-->
-              <div class="col-sm-3 service-text">
-                  <!--1st column content -->
-                   <h3>Residential Cleaning</h3>
-                      <p>
-                          Cupcake ipsum dolor sit amet gummi bears. Gummi bears topping candy chocolate gummies sugar plum. Brownie gummi bears marshmallow chocolate bar gingerbread donut biscuit.
-                      </p>
-              </div>
-              <div class="col-sm-3 service-img">
-                  <!--2nd column content -->
-                  <img src="https://placeimg.com/225/225/people" alt="">
-              </div>
-              <div class="col-sm-3 service-text">
-                  <!--3rd column content -->
-                   <h3>Residential Cleaning</h3>
-                      <p>
-                          Cupcake ipsum dolor sit amet gummi bears. Gummi bears topping candy chocolate gummies sugar plum. Brownie gummi bears marshmallow chocolate bar gingerbread donut biscuit.
-                      </p>
-              </div>
-              <div class="col-sm-3 service-img">
-                  <!--4th column content -->
-                  <img src="https://placeimg.com/225/225/people" alt="">
-              </div>
-          </div>
-       </div>
-       
-      <!-- /Our Cleaning Services Container -->
-
-      <!-- Our Cleaning Portfolio Container -->
-       <div class="container portfolio">
-          <div class="row"> <!--Light Box-->
-             <div class="col-sm-2">
-                  <!--1st column content -->
-                  <img src="https://placeimg.com/150/150/arch" alt="">
-              </div>
-              <div class="col-sm-2">
-                  <!--1st column content -->
-                  <img src="https://placeimg.com/150/150/arch" alt="">
-              </div>
-              <div class="col-sm-2">
-                  <!--2nd column content -->
-                   <img src="https://placeimg.com/150/150/arch" alt="">
-              </div>
-              <div class="col-sm-2">
-                  <!--3rd column content -->
-                   <img src="https://placeimg.com/150/150/arch" alt="">
-              </div>
-              <div class="col-sm-2">
-                  <!--4th column content -->
-                   <img src="https://placeimg.com/150/150/arch" alt="">
-              </div>
-              <div class="col-sm-2">
-                  <!--5th column content -->
-                   <img src="https://placeimg.com/150/150/arch" alt="">
-              </div>
-          </div>
-       </div>
+         <div class="row">
+             <div class="col-sm-12 col-md-4 services">
+                 <img src="imgs/bed2.jpg" alt="">
+                    <h5>Apartment Cleaning</h5>
+                     <p>Cleaning Company offers a program designed to service residents of apartments and condominiums. </p>
+                 <button type="button" class="btn btn-primary learn-more"><a href="apartment.html">Learn More</a></button>
+             </div>
+             <div class="col-sm-12 col-md-4 services">
+                 <img src="imgs/vaccum2.jpg" alt="">
+                    <h5>House Cleaning</h5>
+                     <p>We perform housekeeping services according to the wishes of our clients as well as our 25 step cleaning service. </p>
+                    <button type="button" class="btn btn-primary learn-more"><a href="house.html">Learn More</a></button>
+             </div>
+             <div class="col-sm-12 col-md-4 services">
+                 <img src="imgs/office2.jpg" alt="">
+                    <h5>Office Cleaning</h5>
+                     <p>You spend a lot of time at the office every day. It’s a relief to know it will be clean when you get to work. </p>
+                    <button type="button" class="btn btn-primary learn-more"><a href="office.html">Learn More</a></button>
+             </div>
+         </div>
+         <!--Second Row-->
+         <div class="row">
+             <div class="col-sm-12 col-md-4 services">
+                 <img src="imgs/dishes2.jpg" alt="">
+                    <h5>Kitchen Cleaning</h5>
+                     <p>Leave the dishes for us! We will do a deep clean on your kitchen while you relax. </p>
+                    <button type="button" class="btn btn-primary learn-more"><a href="kitchen.html">Learn More</a></button>
+             </div>
+             <div class="col-sm-12 col-md-4 services">
+                 <img src="imgs/bath2.jpg" alt="">
+                    <h5>Bathroom Cleaning</h5>
+                     <p>We'll give the bathroom a deep clean and santizing, and leave you with fresh linens. </p>
+                    <button type="button" class="btn btn-primary learn-more"><a href="bathroom.html">Learn More</a></button>
+             </div>
+             <div class="col-sm-12 col-md-4 services">
+                 <img src="imgs/wash2.jpg" alt="">
+                    <h5>Floor & Wall Cleaning</h5>
+                     <p>Experience the deep clean our hand mopped floors and hand scrubbed walls.</p>
+                    <button type="button" class="btn btn-primary learn-more"><a href="floor.html">Learn More</a></button>
+             </div>
+         </div>
+        </div>
       <!-- /Our Cleaning Porfolio Container -->
 
       <!--Pricing and Plans-->
-    <div class="row price-row">
-      <div class="col-sm-8">
-        <!--Pricing Table-->
-      <div class="row db-padding-btm db-attached">
-           <!--First Pricing Table-->
-            <div class="col-xs-12  col-sm-4">
-                <div class="db-wrapper">
-                    <div class="db-pricing-eleven db-bk-color-one">
-                        <div class="price">
-                            <sup>$</sup>55
-                                <small>Starting Price</small>
-                        </div>
-                        <div class="clean-type">
-                            Express
-                        </div>
-                        <ul>
-
-                            <li><i class="glyphicon glyphicon-print"></i>Quick Declutter</li>
-                            <li><i class="glyphicon glyphicon-time"></i>Sanatize and Dust </li>
-                            <li><i class="glyphicon glyphicon-trash"></i>Sweep and Vaccum</li>
-                        </ul>
-                        <div class="pricing-footer">
-
-                            <a href="#" class="btn db-button-color-square btn-lg">Details</a>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row db-padding-btm db-attached">
+         <div class="col-md-7">
+          <div class="col-xs-12 col-sm-4 service-wrapper">
+            <div class="db-wrapper ">
+              <div class="db-pricing-eleven db-bk-color-one">
+                <div class="price"> <sup>$</sup>55 <small>Starting At</small> </div>
+                <div class="type"> EXPRESS</div>
+                <ul>
+                  <li><i class="glyphicon glyphicon-print"></i>Quick Declutter </li>
+                  <li><i class="glyphicon glyphicon-time"></i>Sanatize and Dust </li>
+                  <li><i class="glyphicon glyphicon-trash"></i>Sweep and Vaccum</li>
+                </ul>
+                <div class="pricing-footer"> <a href="#" class="btn db-button-color-square btn-lg">Learn More</a> </div>
+              </div>
             </div>
-            <!--/ First Pricing Table-->
-
-            <!--2nd Pricing Table-->
-            <div class="col-xs-12  col-sm-4">
-                 <div class="db-wrapper">
-                <div class="db-pricing-eleven db-bk-color-two popular">
-                    <div class="price">
-                        <sup>$</sup>75
-                                <small>Starting Price</small>
-                    </div>
-                    <div class="clean-type">
-                        Basic
-                    </div>
-                    <ul>
-                        <li><i class="glyphicon glyphicon-print"></i>
-                        Express + </li>
-                        <li><i class="glyphicon glyphicon-time"></i>All Rooms & Bath </li>
-                        <li><i class="glyphicon glyphicon-trash"></i>Sweep, mop, vaccuum</li>
-                    </ul>
-                    <div class="pricing-footer">
-
-                        <a href="#" class="btn db-button-color-square btn-lg">Details</a>
-                    </div>
-                </div>
-                     </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 service-wrapper">
+            <div class="db-wrapper">
+              <div class="db-pricing-eleven db-bk-color-two popular">
+                <div class="price"> <sup>$</sup>75 <small>Starting At</small> </div>
+                <div class="type"> BASIC</div>
+                <ul>
+                  <li><i class="glyphicon glyphicon-print"></i>Express + </li>
+                  <li><i class="glyphicon glyphicon-time"></i>All Rooms & Bath </li>
+                  <li><i class="glyphicon glyphicon-trash"></i>Hand Mop Floors</li>
+                </ul>
+                <div class="pricing-footer mid-pricing-footer"> <a href="#" class="btn db-button-color-square btn-lg">Learn More</a> </div>
+              </div>
             </div>
-            <!--/ 2nd Pricing Table-->
-
-            <!--3rd Pricing Table-->
-            <div class="col-xs-12  col-sm-4">
-                 <div class="db-wrapper">
-                <div class="db-pricing-eleven db-bk-color-three">
-                    <div class="price">
-                        <sup>$</sup>165
-                                <small>Starting Price</small>
-                    </div>
-                    <div class="clean-type">
-                        Deep
-                    </div>
-                    <ul>
-
-                        <li><i class="glyphicon glyphicon-print"></i>Basic Clean + </li>
-                        <li><i class="glyphicon glyphicon-time"></i>Freshen Linens </li>
-                        <li><i class="glyphicon glyphicon-trash"></i>Customized Add-Ons</li>
-                    </ul>
-                    <div class="pricing-footer">
-
-                        <a href="#" class="btn db-button-color-square btn-lg">Details</a>
-                    </div>
-                </div>
-                     </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 service-wrapper">
+            <div class="db-wrapper">
+              <div class="db-pricing-eleven db-bk-color-three">
+                <div class="price"> <sup>$</sup>165<small>Starting At</small></div>
+                <div class="type"> DEEP</div>
+                <ul>
+                  <li><i class="glyphicon glyphicon-print"></i>Basic Clean + </li>
+                  <li><i class="glyphicon glyphicon-time"></i>Freshen Linens </li>
+                  <li><i class="glyphicon glyphicon-trash"></i>Customized Add-Ons</li>
+                </ul>
+                <div class="pricing-footer"> <a href="#" class="btn db-button-color-square btn-lg">Learn More</a> </div>
+              </div>
             </div>
-            <!--/3rd Pricing Table-->
+          </div>
         </div>
-<!--/Pricing Table-->
+        <!--Pricing Headers and Paragraphs-->
+        <div class="col-xs-12 col-md-5 ">
+           <div class="price-plan">
+              <h2>Our Pricing Plans</h2>
+              <h5>Choose a Plan that Fits your Budget</h5>
+                  <br>
+              <h6 >Convenient Pricing Plans</h6>
+                  <p>
+                      Relax knowing your home will be cleaned on schedule with one of flexible cleaning plans.
+                  </p>
+              <h6>We Sweat The Details</h6>
+                  <p>
+                      On top of the standard features, we will go the extra mile to get your place looking fantastic.
+                  </p>
+              <h6>Choose the Plan You Need</h6>
+                  <p>
+                      Don't get roped in with another cleaning company by signing a contract. We clean when you need, not when you don't.
+                  </p>
+            </div>
+          </div>
       </div>
-         <!--Pricing Headers and Paragraphs-->
-          <div class="col-sm-4 ">
-             <div class="price-plan">
-                <h2>Our Pricing Plans</h2>
-                <h5>Choose a Plan that Fits your Budget</h5>
-                    <br>
-                <h6 >Benfit Heading</h6>
-                    <p>
-                        Cupcake ipsum dolor sit amet gummi bears.
-                    </p>
-                <h6>Benfit Heading</h6>
-                    <p>
-                        Cupcake ipsum dolor sit amet gummi bears.
-                    </p>
-                <h6>Benfit Heading</h6>
-                    <p>
-                        Cupcake ipsum dolor sit amet gummi bears.
-                    </p>
-          </div>
-        </div>
     </div>
+    <!--Pricing and Plans End-->
 
-      <!-- Footer Nav Bar Container -->
-       <nav class="navbar-nav foot-nav">
-              <ul class="foot-nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="tests.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </nav>
-      <!-- /Footer Nav Bar Container -->
 
-      <!-- Bottom Footer Container -->
-       <div class="container-fluid bottom-wrap">
-          <div class="row">
-              <div class="col-sm-3 bottom-logo">
-                  <!-- 1st Column Content-->
-                  <img src="imgs/Cleanbee Logo-200x98.png" alt="Clean Bee Cleaning Service" >
-              </div>
-              <div class="col-sm-3 bottom-phone">
-                  <!-- 2nd Column Content-->
-                  <p class="bottom-phone-num">502-555-5555</p>
-              </div>
-              <div class="col-sm-3 bottom-open-col">
-                  <!-- 3rd Column Content-->
-                  <p class="bottom-hours">Hours</p>
-                  <p class="bottom-days">M-F 9:00am-5:00pm</p>
-                  <p class="bottom-weekend">Sat 2pm-8pm</p>
-              </div>
-              <div class="col-sm-3 bottom-sm-col">
-                  <!-- 4th Column Content-->
-                  <a href="#"><img class="facebook" src="imgs/fb.svg" alt="Cleanbee on Facebook"></a>
-                  <a href="#"> <img class="twitter" src="imgs/twitter.svg" alt="Cleanbee on twitter"></a>
-                  <a href="#"><img class="linkin" src="imgs/linkin.svg" alt="Cleanbee on LinkedIn"></a>
-                  <a href="#"><img class="google" src="imgs/google.svg" alt="Cleanbee on Google+"></a>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-sm-12 copy-right">
-                  <p>&copy; Clean Bee 2017. All rights Reserved.</p>
-              </div>
-          </div>
-       </div>
-      <!-- /Bottom Footer Container -->
+      <!--Mobile Footer-->
+        <footer>
+         <div class="container">
+           <div class="row">
+             <div class="col-sm-12 col-md-4 footer-contact-logo">
+               <span class="logo"><img src="imgs/Cleanbee%20Logo-200x982.png"></span>
+               <div class="col-sm-12 copyright"><p>&copy; Clean Bee 2017. All rights Reserved.</p></div>
+             </div>
+               <div class="col-sm-12 col-md-4 footer-contact">
+                  <ul class="address">
+                        <span>Contact</span>
+                        <li>
+                          <b>Phone:</b> 555-555-5555
+                        </li>
+                        <li>
+                           <b>Hours:</b> Open Mon-Sat. 9am-9pm
+                        </li>
+                        <li>
+                          <b>Email:</b> Handoverthebroom@cleanbee.com
+                        </li>
+                   </ul>
+               </div>
+                <div class="col-sm-12 col-md-4 footer-contact-sm">
+                    <ul class="menu">
+                         <span class="find">Find Us On</span>
+                             <div class="col-sm-12 bottom-sm-col">
+                              <!-- 4th Column Content-->
+                              <a href="#"><img class="facebook" src="imgs/fb.svg" alt="Cleanbee on Facebook"></a>
+                              <a href="#"> <img class="twitter" src="imgs/twitter.svg" alt="Cleanbee on twitter"></a>
+                              <a href="#"><img class="linkin" src="imgs/linkin.svg" alt="Cleanbee on LinkedIn"></a>
+                              <a href="#"><img class="google" src="imgs/google.svg" alt="Cleanbee on Google+"></a>
+                        </div>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+        </footer>
+      <!--Mobile Footer End-->
+
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <!-- jQuery library -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <!-- Popper -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
   </body>
 </html>

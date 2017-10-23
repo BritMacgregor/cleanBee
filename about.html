@@ -10,157 +10,223 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
-    
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Raleway" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/app.css">
-    
-  </head>
 
-      <!-- Top of Nav Bar Container -->
+  </head>
+  <body>
+      <!-- Top of Nav Bar Container Mobile-->
        <div class="container-fluid top-wrap">
           <div class="row">
-              <div class="col-sm-3 logo">
-                  <!-- 1st Column Content-->
-                  <img src="imgs/Cleanbee Logo-150x73.png" alt="Clean Bee Cleaning Service" >
+              <div class="col-8 estimate-head">
+                  <h5 >Get your Free Estimate Today!</h5>
               </div>
-              <div class="col-sm-3 phone-num">
-                  <!-- 2nd Column Content-->
-                  <p class="p-num">502-555-5555</p>
+              <div class="col-4">
+                  <button type="button" class="btn btn-primary quote-btn"  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Free Quote</button>
               </div>
-              <div class="col-sm-3 open-col">
-                  <!-- 3rd Column Content-->
-                  <p class="hours">Hours</p>
-                  <p class="days">M-F 9:00am-5:00pm</p>
-                  <p class="weekend">Sat 2pm-8pm</p>
-              </div>
-              <div class="col-sm-3 quote-btn-bg">
-                  <!-- 4th Column Content-->
-                  <button class="btn btn-primary quote-btn">Free Quote</button>
-              </div>
+              <!--Modal Form-->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Free Quote</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="form_id">
+                          <div class="form-group">
+                            <label for="name" class="form-control-label">Name:</label>
+                            <input type="text" required="required" class="form-control" id="name">
+
+                          <label for="email" class="form-control-label">Email:</label>
+                            <input type="text" required="required" class="form-control" id="email">
+
+                          <label for="phone" class="form-control-label">Phone:</label>
+                            <input type="text" required="required" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" class="form-control" id="phone">
+                          </div>
+                          <div class="form-group">
+                            <label for="message" class="form-control-label">Message:</label>
+                            <textarea class="form-control" id="message"></textarea>
+                          </div>
+                          
+                          <input type="button" class="btn btn-secondary" name="submit_id" id="btn_id" value="Get Your Quote!" onclick="submit_by_id()"/>
+                          <input type="button" class="btn btn-secondary" name="close" data-dismiss="modal" value="Close" />
+                          
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
           </div>
        </div>
-      <!-- /Top of Nav Bar Container -->
-      
-      <!-- Sticky Nav Bar Container -->
-      
-          <nav class="navbar-nav top-nav">
-              <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="tests.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </nav>
+       <!-- Top of Nav Bar Container Mobile End -->
 
-      <!-- /Sticky Nav Bar Container -->
-      
+     <!--Mobile Navigation Top Menu -->
+      <nav class="navbar navbar-light top-nav-mobile hide-from-md-lg">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <span><img src="imgs/Cleanbee%20Logo-150x732.png"></span>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto nav-links">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="about.html">ABOUT <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="service.html">SERVICES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tests.html">TESTIMONALS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACTS</a>
+              </li>
+
+            </ul>
+          </div>
+      </nav>
+      <!--Mobile Navigation Top Menu End -->
+
+      <!--Desktop Navigation Top Menu--->
+      <nav class="navbar top-nav hide-from-sm">
+          <ul class="nav justify-content-center nav-ul">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html"><img src="imgs/Cleanbee-Logo-200x982.gif"></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link " href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link active" href="about.html"><b>ABOUT</b></a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="service.html">SERVICES</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="tests.html">TESTIMONIALS</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="contact.html">CONTACT</a>
+              </li>
+           </ul>
+      </nav>
+
+      <!--Desktop Navigation Top Menu End--->
+
       <!-- About us Container -->
        <div class="container about-us">
           <div class="row">
-              <div class="col-sm-12">
+              <div class="col-sm-12 ">
                     <h1 class="about-header">About Us</h1>
               </div>
           </div>
           <div class="row">
-              <div class="col-sm-6 about-img-wrap">
+              <div class=" col-sm-12 col-md-6 about-img-wrap">
                     <!-- About Us Image-->
                     <img src="imgs/about.jpg" alt="About us">
               </div>
-              <div class="col-sm-6 about-para">
+              <div class="col-sm-12 col-md-6 about-para">
                  <h3 class="big-about-heading">Heading About Us</h3>
                  <h6 class="little-about-heading">This is what we are all about</h6>
                      <p>
-                        Cupcake ipsum dolor sit amet gummi bears. Gummi bears topping candy chocolate gummies sugar plum. Brownie gummi bears marshmallow chocolate bar gingerbread donut biscuit. Brownie carrot cake carrot cake oat cake. Brownie caramels sesame snaps chupa chups. Pie gummies jelly beans cupcake toffee sweet.
+                        Cleaning can be a chore and we know you have many choices when you consider hiring a maid service. Because of that, we are constantly thriving to improve our already high standards to have you see us as the absolute best in the industry. It’s not enough to have trust in the cleaning crew that you let into your home… you also have to trust that they will perform a first-class cleaning job for you. Putting our employees through a rigorous training program ensures each member of our cleaning team understands their role and how it relates to the overall performance of the team.
                     </p>
               </div>
           </div>
           <div class="row">
-              <div class="col-sm-6 mission">
+              <div class="col-sm-12 col-md-6 mission">
                     <!-- Our mission heading and lists-->
                     <h2>Our Mission</h2>
-                        <ul>
-                            <li><img src="imgs/check.svg" alt="Family Time" class="check">Cupcake ipsum dolor sit amet gummi bears. </li>
-                            <li><img src="imgs/check.svg" alt="Family Time" class="check">Cupcake ipsum dolor sit amet gummi bears. </li>
-                            <li><img src="imgs/check.svg" alt="Family Time" class="check">Cupcake ipsum dolor sit amet gummi bears. </li>
-                            <li><img src="imgs/check.svg" alt="Family Time" class="check">Cupcake ipsum dolor sit amet gummi bears. </li>
+                        <ul class="mission-list">
+                            <li><img src="imgs/check.svg" alt="Family Time" class="check">Offer a different kind of services to families </li>
+                            <li><img src="imgs/check.svg" alt="Family Time" class="check">Deliver high quality and consistent services </li>
+                            <li><img src="imgs/check.svg" alt="Family Time" class="check">Concentrate our resources on our standards </li>
+                            <li><img src="imgs/check.svg" alt="Family Time" class="check">Make you an extremely satisfied customer </li>
                         </ul>
               </div>
-              <div class="col-sm-6 vision">
+              <div class="col-sm-12 col-md-6 vision">
                     <!-- OUr vision Heading and paragraphs-->
                     <h2>Our Vision</h2>
                     <p>
-                        Cupcake ipsum dolor sit amet gummi bears. Gummi bears topping candy chocolate gummies sugar plum. Brownie gummi bears marshmallow chocolate bar gingerbread donut biscuit. 
+                        Our focus is to really listen to our clients, understand their needs and provide the exceptional level of residential and commercial cleaning or maid service that makes them relax with the confidence that the job will be done well. Our cleaning services are thorough, consistent and customized.
                     </p>
               </div>
           </div>
        </div>
       <!-- /About Us Container -->
-      
+
       <!-- 3 col image container -->
        <div class="container about-image-container">
           <div class="row">
-              <div class="col-sm-4">
-                  <!--1st column content -->
-                  <img src="imgs/placeholder.png" alt="">
+              <div class="col-sm-12 col-md-4">
+                <div class="img-heading"><h2>Easy Payments</h2></div>
+                  <img class="bottom-about-img" src="imgs/paying.jpg" alt="">
+                <div class="img-word"><p>Easy payments via paypal or via credit card payment processing service.</p></div>
               </div>
-              <div class="col-sm-4">
-                  <!--Middle column content -->
-                  <img src="imgs/placeholder.png" alt="">
+              <div class="col-sm-12 col-md-4">
+                  <div class="img-heading"><h2>Pet Friendly</h2></div>
+                  <img class="bottom-about-img" src="imgs/pets.jpg" alt="">
+                  <div class="img-word"><p>We us pet friendly cleaners as your pet is a valued member of your family.</p></div>
               </div>
-              <div class="col-sm-4">
-                  <!--3rd column content -->
-                  <img src="imgs/placeholder.png" alt="">
+              <div class="col-sm-12 col-md-4">
+                  <div class="img-heading"><h2>On Time</h2></div>
+                  <img class="bottom-about-img" src="imgs/calander.jpg" alt="">
+                  <div class="img-word"><p>Your time is important to us. We provide always on time cleaning service.</p></div>
               </div>
           </div>
        </div>
       <!-- /3 col image Container -->
-      
-      <!-- Footer Nav Bar Container -->
-       <nav class="navbar-nav foot-nav">
-              <ul class="foot-nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="tests.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-          </nav>
-      <!-- /Footer Nav Bar Container -->
-      
-      <!-- Bottom Footer Container -->
-       <div class="container-fluid bottom-wrap">
-          <div class="row">
-              <div class="col-sm-3 bottom-logo">
-                  <!-- 1st Column Content-->
-                  <img src="imgs/Cleanbee Logo-200x98.png" alt="Clean Bee Cleaning Service" >
-              </div>
-              <div class="col-sm-3 bottom-phone">
-                  <!-- 2nd Column Content-->
-                  <p class="bottom-phone-num">502-555-5555</p>
-              </div>
-              <div class="col-sm-3 bottom-open-col">
-                  <!-- 3rd Column Content-->
-                  <p class="bottom-hours">Hours</p>
-                  <p class="bottom-days">M-F 9:00am-5:00pm</p>
-                  <p class="bottom-weekend">Sat 2pm-8pm</p>
-              </div>
-              <div class="col-sm-3 bottom-sm-col">
-                  <!-- 4th Column Content-->
-                  <a href="#"><img class="facebook" src="imgs/fb.svg" alt="Cleanbee on Facebook"></a>
-                  <a href="#"> <img class="twitter" src="imgs/twitter.svg" alt="Cleanbee on twitter"></a>
-                  <a href="#"><img class="linkin" src="imgs/linkin.svg" alt="Cleanbee on LinkedIn"></a>
-                  <a href="#"><img class="google" src="imgs/google.svg" alt="Cleanbee on Google+"></a>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-sm-12 copy-right">
-                  <p>&copy; Clean Bee 2017. All rights Reserved.</p>
-              </div>
-          </div>
-       </div>
-      <!-- /Bottom Footer Container -->
-      
+
+      <!--Mobile Footer-->
+        <footer>
+         <div class="container">
+           <div class="row">
+             <div class="col-sm-12 col-md-4 footer-contact-logo">
+               <span class="logo"><img src="imgs/Cleanbee%20Logo-200x982.png"></span>
+               <div class="col-sm-12 copyright"><p>&copy; Clean Bee 2017. All rights Reserved.</p></div>
+             </div>
+               <div class="col-sm-12 col-md-4 footer-contact">
+                  <ul class="address">
+                        <span>Contact</span>
+                        <li>
+                          <b>Phone:</b> 555-555-5555
+                        </li>
+                        <li>
+                           <b>Hours:</b> Open Mon-Sat. 9am-9pm
+                        </li>
+                        <li>
+                          <b>Email:</b> Handoverthebroom@cleanbee.com
+                        </li>
+                   </ul>
+               </div>
+                <div class="col-sm-12 col-md-4 footer-contact-sm">
+                    <ul class="menu">
+                         <span class="find">Find Us On</span>
+                             <div class="col-sm-12 bottom-sm-col">
+                              <!-- 4th Column Content-->
+                              <a href="#"><img class="facebook" src="imgs/fb.svg" alt="Cleanbee on Facebook"></a>
+                              <a href="#"> <img class="twitter" src="imgs/twitter.svg" alt="Cleanbee on twitter"></a>
+                              <a href="#"><img class="linkin" src="imgs/linkin.svg" alt="Cleanbee on LinkedIn"></a>
+                              <a href="#"><img class="google" src="imgs/google.svg" alt="Cleanbee on Google+"></a>
+                        </div>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+        </footer>
+      <!--Mobile Footer End-->
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

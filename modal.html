@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--HOME PAGE -->
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+  <title>Clean Bee - Cleaning Service</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Raleway" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="modal.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+
+  </head>
+  <body>
+    <!-- Get in Touch Form-->
+    <div class="col-sm-12 col-md-6  contact-form">
+         <h3>Get in Touch</h3>
+         <h6>Send Us a Message</h6>
+          <form role="form" class="the-form">
+            <br class="break-style">
+      <div class="form-group" >
+      <input type="text" required="required" class="form-control" id="name"  name="name" placeholder="Name" required>
+    </div>
+    <div class="form-group">
+      <input type="text email" required="required" class="form-control" id="email" name="email" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+                                            <!--Regular Expression pattern to detect correct form entry "validation"-->
+      <input type="text" required="required" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+    </div>
+              <div class="form-group">
+                  <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="100" rows="5">
+                  </textarea>
+              </div>
+              <!-- This button doesn't submit, it Triggers/Opens The Modal, which contains the actual submit button -->
+             <button id="myBtn" name="submit" type="button" class="btn btn-primary pull-right sub-btn">Submit Form</button>
+             <button type="reset" id="reset" name="reset" class="btn btn-primary pull-right sub-btn">Clear</button>
+          </form>
+    </div>
+    <!--/Get in Touch Form-->
+<!-- /Contact Info and Get in Touch Container -->
+
+<!--Jquery Popup Modal-->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="confirmation">
+        <h3>Form Confirmation</h3>
+        <p> Please Confirm Your Details</p>
+        <br>
+        <div id="details">
+
+        </div>
+        <p onChange="myFunction()"></p>
+    </div>
+  </div>
+
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="js/modal.js"></script>
+  </body>
+</html>
