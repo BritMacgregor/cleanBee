@@ -447,7 +447,7 @@ margin-bottom: 10%;
         background-color: #52b6bc;
        border:none;
     }
-    
+
     .learn-more a {
         text-decoration: none;
         color: white;
@@ -1481,3 +1481,92 @@ CONTACT PAGE
 
 
 }/*--end--*/
+
+/*--Css Pop up Box --*/
+/*.boxy {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 10%;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+}*/
+.expressOverlay, .basicOverlay, .deepOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 500;
+}
+.expressOverlay:target, .basicOverlay:target, .deepOverlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.expressPopup, .basicPopup, .deepPopup {
+  margin-top: 5%;
+  padding: 5%;
+  background: #fff;
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.expressPopup h2, .basicPopup h2, .deepPopup h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  color: #52b6bc;
+  font-weight: 500;
+}
+
+.expressPopup h6, .basicPopup h6, .deepPopup h6 {
+  margin-top: 0;
+  font-size: 1.4em;
+  color: #52b6bc;
+  font-weight: 400;
+}
+
+.expressPopup, .basicPopup, .deepPopup {
+  position: absolute;
+  /*top: 20px;*/
+  right: 25%;
+  transition: all 200ms;
+  font-size: 1em;
+  text-decoration: none;
+
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+.expressPopup, .basicPopup, .deepPopup, .close:hover {
+  color: black;
+  font-size: 1.3em;
+}
+.expressPopup, .basicPopup, .deepPopup, .basicContent, .deepContent, .expressContent {
+  max-height: 70%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .boxy{
+    width: 70%;
+  }
+  .expressPopup, .basicPopup, .deepPopup {
+    width: 70%;
+  }
+}

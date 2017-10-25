@@ -23,15 +23,50 @@
 
     <body>
 
-       <!-- Top of Nav Bar Container Mobile-->
+      <!-- Top of Nav Bar Container Mobile-->
        <div class="container-fluid top-wrap">
           <div class="row">
               <div class="col-8 estimate-head">
                   <h5 >Get your Free Estimate Today!</h5>
               </div>
               <div class="col-4">
-                  <button class="btn btn-primary quote-btn">Free Quote</button>
+                  <button type="button" class="btn btn-primary quote-btn"  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Free Quote</button>
               </div>
+              <!--Modal Form-->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Free Quote</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form id="form_id">
+                          <div class="form-group">
+                            <label for="name" class="form-control-label">Name:</label>
+                            <input type="text" required="required" class="form-control" id="name">
+
+                          <label for="email" class="form-control-label">Email:</label>
+                            <input type="text" required="required" class="form-control" id="email">
+
+                          <label for="phone" class="form-control-label">Phone:</label>
+                            <input type="text" required="required" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" class="form-control" id="phone">
+                          </div>
+                          <div class="form-group">
+                            <label for="message" class="form-control-label">Message:</label>
+                            <textarea class="form-control" id="message"></textarea>
+                          </div>
+                          
+                          <input type="button" class="btn btn-secondary" name="submit_id" id="btn_id" value="Get Your Quote!" onclick="submit_by_id()"/>
+                          <input type="button" class="btn btn-secondary" name="close" data-dismiss="modal" value="Close" />
+                          
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
           </div>
        </div>
        <!-- Top of Nav Bar Container Mobile End -->
@@ -228,7 +263,7 @@
                   <ul class="address">
                         <span>Contact</span>
                         <li>
-                          <b>Phone:</b> 555-555-5555
+                          <b>Phone:</b> 502-249-3765
                         </li>
                         <li>
                            <b>Hours:</b> Open Mon-Sat. 9am-9pm
